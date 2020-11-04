@@ -1,4 +1,4 @@
-import 'package:error_handling_demo/view_model.dart';
+import 'package:error_handling_demo/ui/helper/view_model.dart';
 import 'package:flutter/material.dart';
 
 /// Use this widget to build different ViewState from the view model. The only

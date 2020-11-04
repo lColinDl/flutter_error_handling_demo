@@ -1,5 +1,5 @@
-import 'package:error_handling_demo/todo_list.dart';
-import 'package:error_handling_demo/user_profile.dart';
+import 'package:error_handling_demo/domain/model/todo_list.dart';
+import 'package:error_handling_demo/domain/model/user_profile.dart';
 
 class HomeInfo {
   final UserProfile userProfile;

@@ -1,6 +1,6 @@
-import 'package:error_handling_demo/exceptions.dart';
-import 'package:error_handling_demo/user_profile.dart';
-import 'package:error_handling_demo/user_profile_repository.dart';
+import 'package:error_handling_demo/data/user_profile_repository.dart';
+import 'package:error_handling_demo/domain/model/exceptions.dart';
+import 'package:error_handling_demo/domain/model/user_profile.dart';
 
 class RegisterUseCase {
   final UserProfileRepository repository;

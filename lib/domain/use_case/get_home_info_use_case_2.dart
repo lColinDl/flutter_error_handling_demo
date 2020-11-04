@@ -1,17 +1,17 @@
-import 'package:error_handling_demo/home_info.dart';
-import 'package:error_handling_demo/home_info_repository.dart';
+import 'package:error_handling_demo/data/home_info_repository.dart';
+import 'package:error_handling_demo/domain/model/home_info.dart';
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'get_home_info_result_use_case.freezed.dart';
+part 'get_home_info_use_case_2.freezed.dart';
 
-class GetHomeInfoResultUseCase {
+class GetHomeInfoUseCase2 {
   final HomeInfoRepository repository;
 
-  GetHomeInfoResultUseCase(this.repository);
+  GetHomeInfoUseCase2(this.repository);
 
   Future<HomeInfoResult> execute() async {
-    final result = await repository.getHomeInfoAsResult();
+    final result = await repository.getHomeInfo2();
 
     result.when(
       success: (info) {

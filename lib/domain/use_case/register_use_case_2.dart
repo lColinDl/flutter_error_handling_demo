@@ -1,17 +1,17 @@
-import 'package:error_handling_demo/user_profile.dart';
-import 'package:error_handling_demo/user_profile_repository.dart';
+import 'package:error_handling_demo/data/user_profile_repository.dart';
+import 'package:error_handling_demo/domain/model/user_profile.dart';
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'register_with_result_use_case.freezed.dart';
+part 'register_use_case_2.freezed.dart';
 
-class RegisterWithResultUseCase {
+class RegisterUseCase2 {
   final UserProfileRepository repository;
 
-  RegisterWithResultUseCase(this.repository);
+  RegisterUseCase2(this.repository);
 
   Future<RegisterResult> execute(String userName, String password) async {
-    return repository.registerWithResult(userName, password);
+    return repository.register2(userName, password);
   }
 }
 

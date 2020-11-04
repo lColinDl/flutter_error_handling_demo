@@ -1,4 +1,4 @@
-import 'package:error_handling_demo/localized_messages.dart';
+import 'package:error_handling_demo/domain/model/localized_messages.dart';
 
 abstract class LocalizedException implements Exception, LocalizedMessage {}
 

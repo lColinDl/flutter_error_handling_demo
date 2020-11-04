@@ -1,10 +1,11 @@
 import 'package:dio/dio.dart';
-import 'package:error_handling_demo/get_home_info_result_use_case.dart';
-import 'package:error_handling_demo/get_home_info_use_case.dart';
-import 'package:error_handling_demo/home_info_repository.dart';
-import 'package:error_handling_demo/home_page.dart';
-import 'package:error_handling_demo/register_use_case.dart';
-import 'package:error_handling_demo/user_profile_repository.dart';
+import 'package:error_handling_demo/data/home_info_repository.dart';
+import 'package:error_handling_demo/data/user_profile_repository.dart';
+import 'package:error_handling_demo/domain/use_case/get_home_info_use_case.dart';
+import 'package:error_handling_demo/domain/use_case/get_home_info_use_case_2.dart';
+import 'package:error_handling_demo/domain/use_case/register_use_case.dart';
+import 'package:error_handling_demo/ui/home/home_page_view_model.dart';
+import 'package:error_handling_demo/ui/home/home_page_view_model_2.dart';
 import 'package:get_it/get_it.dart';
 
 class DI {
@@ -25,9 +26,9 @@ extension _Initializer on GetIt {
     registerLazySingleton(() => HomeInfoRepository(get(), get()));
     registerLazySingleton(() => UserProfileRepository(get(), get()));
     registerFactory(() => GetHomeInfoUseCase(get()));
-    registerFactory(() => GetHomeInfoResultUseCase(get()));
+    registerFactory(() => GetHomeInfoUseCase2(get()));
     registerFactory(() => RegisterUseCase(get()));
     registerFactory(() => HomePageViewModel(get(), get()));
-    registerFactory(() => HomePageResultViewModel(get(), get()));
+    registerFactory(() => HomePageViewModel2(get(), get()));
   }
 }

@@ -1,9 +1,9 @@
 import 'package:dio/dio.dart';
-import 'package:error_handling_demo/exceptions.dart';
-import 'package:error_handling_demo/get_home_info_result_use_case.dart';
-import 'package:error_handling_demo/home_info.dart';
-import 'package:error_handling_demo/todo_list.dart';
-import 'package:error_handling_demo/user_profile.dart';
+import 'package:error_handling_demo/domain/model/exceptions.dart';
+import 'package:error_handling_demo/domain/model/home_info.dart';
+import 'package:error_handling_demo/domain/model/todo_list.dart';
+import 'package:error_handling_demo/domain/model/user_profile.dart';
+import 'package:error_handling_demo/domain/use_case/get_home_info_use_case_2.dart';
 
 class HomeInfoRepository {
   final Dio dio;
@@ -21,7 +21,7 @@ class HomeInfoRepository {
     }
   }
 
-  Future<HomeInfoResult> getHomeInfoAsResult() async {
+  Future<HomeInfoResult> getHomeInfo2() async {
     try {
       final response = await dio.get('http://www.example.com');
       final data = mapper.map(response.data);

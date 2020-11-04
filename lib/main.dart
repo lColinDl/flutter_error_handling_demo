@@ -1,5 +1,5 @@
 import 'package:error_handling_demo/di.dart';
-import 'package:error_handling_demo/home_page.dart';
+import 'package:error_handling_demo/ui/home/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {

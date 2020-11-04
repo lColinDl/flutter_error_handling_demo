@@ -1,8 +1,8 @@
 import 'package:dio/dio.dart';
-import 'package:error_handling_demo/exceptions.dart';
-import 'package:error_handling_demo/register_use_case.dart';
-import 'package:error_handling_demo/register_with_result_use_case.dart';
-import 'package:error_handling_demo/user_profile.dart';
+import 'package:error_handling_demo/domain/model/exceptions.dart';
+import 'package:error_handling_demo/domain/model/user_profile.dart';
+import 'package:error_handling_demo/domain/use_case/register_use_case.dart';
+import 'package:error_handling_demo/domain/use_case/register_use_case_2.dart';
 
 class UserProfileRepository {
   final Dio dio;
@@ -34,7 +34,7 @@ class UserProfileRepository {
     }
   }
 
-  Future<RegisterResult> registerWithResult(String userName, String password) async {
+  Future<RegisterResult> register2(String userName, String password) async {
     try {
       final response = await dio.post('http://www.example.com');
 
